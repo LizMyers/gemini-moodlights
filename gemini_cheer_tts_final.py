@@ -37,7 +37,7 @@ VALID_COLORS = [
 
 # --- Personalization ---
 USER_NAME = "Lizzie"
-COMPUTER_LANGUAGE = "en-GB" 
+COMPUTER_LANGUAGE = "fr-FR" 
 
 VOICE_MODELS = {
     "en-US": "en-US-Standard-C", # female - US Englih
@@ -169,17 +169,6 @@ def post_to_mastodon(color):
     else:
         print("❌ Mastodon error:", response.text)
 
-# --- Greetings Map by Language ---
-GREETINGS_MAP = {
-    "en-US": ["Hi {user}, how's it going?", "Good to see you, {user}. What’s the vibe today?"],
-    "en-GB": ["Hiya {user}, how's it going?", "Welcome back {user}! What color suits you today?"],
-    "es-ES": ["¡Hola {user}! ¿Cómo estás hoy?"],
-    "fr-FR": ["Salut {user}, comment ça va aujourd’hui ?"],
-    "de-DE": ["Hallo {user}, wie geht’s dir heute?"],
-    "it-IT": ["Ciao {user}, come va oggi?"],
-    "pt-PT": ["Olá {user}, como vai você hoje?"],
-    "uk-UA": ["Привіт {user}, як справи сьогодні?"]
-}
 
 # --- Start Conversation ---
 # --- Begin main flow ---
@@ -221,6 +210,8 @@ extraction_prompt = (
     f"Suggest a Cheerlights color that matches this mood.\n"
     f"Valid colors are: {', '.join(VALID_COLORS)}.\n"
     f"If you can’t match a color, pick a random one.\n"
+    f"Important: Do not use emojis or special symbols. Keep the language friendly but natural.\n"
+    f"Keep punctuation simple (periods, commas, exclamation marks are fine).\n"
     f"Return your answer like this:\n"
     f"Color: <color>\n"
     f"Message: <friendly message>"
