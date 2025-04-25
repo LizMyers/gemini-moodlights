@@ -15,9 +15,9 @@ To see the cheerlight color change IRL:
 - Voice recording via your computer mic
 - Whisper transcription
 - Gemini prompt-to-color mapping
-- Multilingual text-to-speech via **Google Cloud TTS**
+- Multi-lingual and high quality voices from GCP
 - Mastodon post
-- Ambient + multilingual support
+- Ambiant lighting and Cheerlights Voice UI
 
 ---
 

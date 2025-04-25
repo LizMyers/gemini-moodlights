@@ -1,0 +1,5 @@
+openai-whisper
+mastodon.py
+python-dotenv
+pyserial
+requests
