@@ -1,0 +1,29 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+whisper_env/
+
+# Environment variables and secrets
+.env
+*.env
+*.key.json
+*.pem
+*.crt
+*.csr
+
+# Audio files
+*.wav
+output.wav
+mic_input.wav
+
+# VSCode settings (optional)
+.vscode/
+
+# macOS system files
+.DS_Store
+
+gcp_tts_key.json
