@@ -132,7 +132,8 @@ VOICE_MODELS = {
 - Add support for other boards (ESP32, Pi Zero) by serial connection or webhooks
 
 ---
-## The project tutorial is available here https://www.hackster.io/elizmyers/gemini-moodlights-2e8fe4
+## Project tutorial:
+https://www.hackster.io/elizmyers/gemini-moodlights-2e8fe4
 
 ## 😊 Thanks for trying it out!
 
