@@ -64,6 +64,7 @@ Create a `.env` file in the project root:
 
 ```env
 GOOGLE_API_KEY=your_gemini_api_key
+GCP_TTS_KEY_PATH=path_to_your_service_key.JSON (at root of your project)
 MASTODON_TOKEN=your_mastodon_token
 MASTODON_API_URL=https://mastodon.social/api/v1/statuses
 ```
@@ -74,14 +75,35 @@ MASTODON_API_URL=https://mastodon.social/api/v1/statuses
 - Click the Get API Key Button
 - Select Gemini 2.0 Flash - it's FREE
 
-### 6. Mastodon Token
+### 6. Google Cloud Service Account Key (for Text-to-Speech)
+
+- Go to the [Google Cloud Console](https://console.cloud.google.com/)
+- Create a **new project** (or select an existing one)
+- In the left sidebar, go to **APIs & Services > Library**
+- Search for **Text-to-Speech API**
+- **Enable** the Text-to-Speech API
+- In the sidebar, go to **APIs & Services > Credentials**
+- Click **Create Credentials > Service Account**
+- Give your Service Account a name (example: `gemini-tts`)
+- Click **Create and Continue** (default roles are fine for this project)
+- After the Service Account is created, find it in the list and **click it**
+- Under the **Keys** tab, click **Add Key > Create New Key**
+- Choose **JSON** format and **Download** the key
+- Save this `.json` file in the root project directory
+- In your `.env` file, set the path to this JSON key as `GCP_TTS_KEY_PATH`
+
+> **Note:** This Service Account key is needed so your project can synthesize voice messages with Google Cloud Text-to-Speech.
+
+> **Tip:** Google Cloud may ask you to set up a billing account when enabling the Text-to-Speech API, even if you stay within the free tier. Don't worry — for light personal use like this project, you won't be charged.
+
+### 7. Mastodon Token
 
 - Get your Mastodon Account (https://mastodon.social)
 - Preference > Development > New Application
 - Name it something like VoiceToMastodon
 - **IMPORTANT** check write:statuses
 
-### 7. Git Ignore Sensitive Files
+### 8. Git Ignore Sensitive Files
 
 Be sure your `.gitignore` includes:
 
@@ -89,7 +111,7 @@ Be sure your `.gitignore` includes:
 .env
 ```
 
-### 7. Run the App
+### 9. Run the App
 
 ```bash
 source venv/bin/activate

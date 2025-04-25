@@ -27,6 +27,7 @@ load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 MASTODON_TOKEN = os.getenv("MASTODON_TOKEN")
 MASTODON_API_URL = os.getenv("MASTODON_API_URL")
+GCP_TTS_KEY_PATH = os.getenv("GCP_TTS_KEY_PATH")
 
 # --- Constants ---
 VALID_COLORS = [
@@ -35,8 +36,8 @@ VALID_COLORS = [
 ]
 
 # --- Personalization ---
-USER_NAME = "Lizzie"
-COMPUTER_LANGUAGE = "de-DE" 
+USER_NAME = "[YOUR NAME GOES HERE]"
+COMPUTER_LANGUAGE = "en-US" 
 
 VOICE_MODELS = {
     "en-US": "en-US-Standard-C", # female - US Englih
