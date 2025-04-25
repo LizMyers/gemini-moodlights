@@ -1,4 +1,4 @@
-# Gemini Moodlights TTS
+# Gemini Moodlights
 
 This project allows you to control Cheerlights with Gemini and your voice. Edit the script to enter your own name, prefeered language and run it. Gemini asks how you're doing and interprets your answer as a color. Then the new color is posted to Mastodon where the Cheerlights bot picks it up and changes the color. To learn more about Cheerlights, see this link: https://www.cheerlights.com/learn.
 
