@@ -2,7 +2,7 @@
 
 This project allows you to control Cheerlights with Gemini and your voice. Edit the script to enter your own name, prefeered language and run it. Gemini asks how you're doing and interprets your answer as a color. Then the new color is posted to Mastodon where the Cheerlights bot picks it up and changes the color. To learn more about Cheerlights, see this link: https://www.cheerlights.com/learn.
 
-To see the cheerlight color change IRL:
+To see the cheerlight color change IRL, there are a few options:
 1. Visit this cheerlights project within Liz's portfolio: https://lizmyers.sanddollarapps.com
 2. Install the Chrome Extension for Cheerlights: https://chromewebstore.google.com/detail/cheerlights/hpphbpobchhjfiknafjcpopiipahokpd
 3. Make an IoT device with a NeoPixel Ring, Matrix, LED Strips
@@ -63,9 +63,9 @@ pip install openai-whisper sounddevice scipy python-dotenv requests google-cloud
 Create a `.env` file in the project root:
 
 ```env
-GOOGLE_API_KEY=your_gemini_api_key
-GCP_TTS_KEY_PATH=path_to_your_service_key.JSON (at root of your project)
-MASTODON_TOKEN=your_mastodon_token
+GOOGLE_API_KEY=[your-google-api-key-here]
+GCP_TTS_KEY_PATH=[path-to-your-service-account.json]
+MASTODON_TOKEN=[your-mastodon-access-token-here]
 MASTODON_API_URL=https://mastodon.social/api/v1/statuses
 ```
 
@@ -152,12 +152,12 @@ VOICE_MODELS = {
 2. Listens to 3-second audio via laptop mic
 3. Transcribes speech to text with Whisper
 4. Gemini matches the mood to a color
-5. Whisper transcribes text to speech (TTS)
-6. Gemini speaks a response message and...
+5. Google Cloud transcribes text to speech (TTS)
+6. Gemini speaks a response message and simultaneously...
 7. Posts the new color to Mastodon 
 8. Cheerlights following the Thingspeak channel 1417 pick up the color
 
-To learn more about how Cheerlights work, see: http://cheerlights.io/learn
+To learn more about how Cheerlights work, see: http://cheerlights.com/learn
 
 ---
 
